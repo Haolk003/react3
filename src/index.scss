@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: aliceblue;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+  h2{
+        font-size:50px;
+        text-align: center;
+        margin-top: 100px;
+        font-weight: 700;
+        position: relative;
+        &::after{
+            position: absolute;
+            content: "";
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background-color: rgb(240, 165, 25);
+        }
+    }
+    ul{
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        li{
+            margin-right: 60px; 
+            
+             button{
+                border: none;
+                outline: none;
+                background-color: transparent   ;
+                font-size: 22px;
+            color:rgb(172, 125, 37);
+            cursor: pointer;
+            }
+            &:last-child{
+            margin-right: 0;
+           
+        }
+
+        }
+       
+    }
+    .foods{
+        display: grid;
+        width: 70%;
+        grid-template-columns: repeat(2,1fr);
+        overflow: hidden;
+        gap: 20px;
+        margin: 0 auto;
+        margin-top: 60px;
+        .food{
+            width: 100%;
+            height: 200px;
+            display: flex;
+            .image_food{
+                width: 250px;
+                height: 150px;
+                margin-right: 20px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                    border: 5px solid rgb(172, 125, 37);
+                    border-radius: 5px;
+                }
+            }
+            .text{
+                width: calc(100% - 270px);
+                position: relative;
+                h4{
+                    font-size: 18px;
+                    border-bottom: 1px solid rgba(51, 51, 51, 0.192);
+                    padding-bottom: 5px;
+                    margin-bottom: 20px;
+                }
+                .price{
+                    position: absolute;
+                    top:0;
+                    right: 0;
+                    color:rgb(172, 125, 37);
+                    font-weight: 600;
+
+                }
+                p{
+                    color:rgb(99, 98, 98);
+                    font-weight: 500;
+                }
+            }
+        }
+    }
